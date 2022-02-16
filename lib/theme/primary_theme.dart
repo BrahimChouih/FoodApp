@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:foodapp/utils/constants.dart';
 
 ThemeData primaryTheme = ThemeData.light().copyWith(
+  scaffoldBackgroundColor: greyColor,
   inputDecorationTheme: const InputDecorationTheme(
     floatingLabelStyle: TextStyle(
       color: Colors.grey,
