@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodapp/components/auth_textfield.dart';
 import 'package:foodapp/components/custom_button.dart';
 import 'package:foodapp/components/logo.dart';
+import 'package:foodapp/screens/home_screen.dart';
 import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
@@ -121,7 +122,9 @@ class AuthScreen extends StatelessWidget {
                       Obx(
                         () => CustomButton(
                           text: isSignin.value ? 'Sign-In' : 'Sign-Up',
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.to(HomeScreen());
+                          },
                         ),
                       ),
                       SizedBox(height: Get.height * 0.05),

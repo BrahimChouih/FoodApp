@@ -8,7 +8,7 @@ import 'package:foodapp/screens/auth_screen.dart';
 import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
-class SplashScrenn extends StatelessWidget {
+class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,15 +30,10 @@ class SplashScrenn extends StatelessWidget {
                   height: Get.height * 0.03,
                 ),
                 Text(
-                  "Food For",
-                  style: Get.theme.textTheme.headline2?.copyWith(
+                  "Food For \nEveryone",
+                  style: Get.theme.textTheme.headline3?.copyWith(
                     fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  "Everyone",
-                  style: Get.theme.textTheme.headline2?.copyWith(
-                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
               ],

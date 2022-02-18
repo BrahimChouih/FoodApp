@@ -3,10 +3,18 @@ import 'package:foodapp/utils/constants.dart';
 
 ThemeData primaryTheme = ThemeData.light().copyWith(
   scaffoldBackgroundColor: greyColor,
+  splashColor: Colors.transparent,
+  highlightColor: Colors.transparent,
+  hoverColor: Colors.transparent,
   inputDecorationTheme: const InputDecorationTheme(
     floatingLabelStyle: TextStyle(
       color: Colors.grey,
       fontFamily: 'SFProText',
+    ),
+    hintStyle: TextStyle(
+      color: Colors.grey,
+      fontFamily: 'SFProText',
+      fontWeight: FontWeight.bold,
     ),
     labelStyle: TextStyle(
       color: Colors.grey,
@@ -25,10 +33,19 @@ ThemeData primaryTheme = ThemeData.light().copyWith(
     ),
   ),
   textTheme: const TextTheme(
-    headline2: TextStyle(
+    headline3: TextStyle(
       fontFamily: 'SFProRounded',
+      color: Colors.black,
+    ),
+    headline4: TextStyle(
+      fontFamily: 'SFProRounded',
+      color: Colors.black,
     ),
     bodyText2: TextStyle(
+      fontFamily: 'SFProText',
+      color: Colors.black,
+    ),
+    bodyText1: TextStyle(
       fontFamily: 'SFProText',
       color: Colors.black,
     ),

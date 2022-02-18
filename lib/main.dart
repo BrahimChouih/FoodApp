@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodapp/screens/home_screen.dart';
 import 'package:foodapp/screens/splash_screen.dart';
 import 'package:foodapp/theme/primary_theme.dart';
 import 'package:get/get.dart';
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: primaryTheme,
       debugShowCheckedModeBanner: false,
-      home: SplashScrenn(),
+      home: SplashScreen(),
+      // home: HomeScreen(),
     );
   }
 }
