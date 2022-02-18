@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodapp/components/custom_app_bar.dart';
 import 'package:foodapp/components/custom_tap_bar.dart';
+import 'package:foodapp/screens/foods_screen.dart';
 import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
@@ -15,8 +16,9 @@ class HomeTap extends StatelessWidget {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(height: Get.height * 0.01),
+            SizedBox(height: Get.height * 0.02),
             //  App bar
             CustomAppBar(
               padding: Get.width * 0.08,
@@ -24,7 +26,6 @@ class HomeTap extends StatelessWidget {
                 onTap: () {},
                 child: SvgPicture.asset(
                   'assets/icons/menu.svg',
-                  color: Colors.black38,
                 ),
               ),
               trailing: InkWell(
@@ -76,13 +77,19 @@ class HomeTap extends StatelessWidget {
             ), // Food Categories
             Expanded(
               child: CustomTapBar(
-                taps: const ['Foods', 'Drinks', 'Snacks', 'Soups', 'Foods'],
+                taps: const [
+                  'Foods',
+                  'Drinks',
+                  'Snacks',
+                  'Soups',
+                  'Foods',
+                ],
                 pages: [
-                  Container(),
-                  Container(),
-                  Container(),
-                  Container(),
-                  Container(),
+                  FoodsScreen(),
+                  FoodsScreen(),
+                  FoodsScreen(),
+                  FoodsScreen(),
+                  FoodsScreen(),
                 ],
               ),
             ),

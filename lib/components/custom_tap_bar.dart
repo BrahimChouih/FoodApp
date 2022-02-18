@@ -13,14 +13,13 @@ class CustomTapBar extends StatelessWidget {
 
   List<String> taps;
   List<Widget> pages;
-  PageController pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
     return GetBuilder<TapController>(
       builder: (_) => Column(
         children: [
-          Container(
+          SizedBox(
             width: Get.width,
             height: 40,
             child: ListView.builder(
@@ -33,12 +32,7 @@ class CustomTapBar extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: PageView.builder(
-              controller: pageController,
-              onPageChanged: tapController.onChangoFromPageView,
-              itemCount: pages.length,
-              itemBuilder: (_, i) => pages[i],
-            ),
+            child: pages[tapController.currentPage],
           ),
         ],
       ),
@@ -51,11 +45,11 @@ class CustomTapBar extends StatelessWidget {
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       onTap: () {
-        tapController.onChange(index, pageController);
+        tapController.onChange(index);
       },
       child: Container(
-        width: 80,
         margin: const EdgeInsets.symmetric(horizontal: 5),
+        width: 80,
         child: Column(
           children: [
             Text(

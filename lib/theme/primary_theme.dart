@@ -42,12 +42,13 @@ ThemeData primaryTheme = ThemeData.light().copyWith(
       color: Colors.black,
     ),
     bodyText2: TextStyle(
-      fontFamily: 'SFProText',
+      fontFamily: 'SFProRounded',
       color: Colors.black,
     ),
     bodyText1: TextStyle(
       fontFamily: 'SFProText',
       color: Colors.black,
+      fontWeight: FontWeight.bold,
     ),
   ),
 );

@@ -6,29 +6,47 @@ class CustomAppBar extends StatelessWidget {
   CustomAppBar({
     Key? key,
     this.leading,
-    this.padding = 8.0,
-    this.title,
+    this.padding = 15.0,
+    this.title = '',
     this.trailing,
+    this.backButton = false,
   }) : super(key: key);
 
   Widget? leading;
   Widget? trailing;
-  String? title;
+  String title;
+  final bool backButton;
   double padding;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: padding),
-      child: Row(
-        children: [
-          leading ?? const SizedBox(),
-          Expanded(
-            child: title != null ? Text(title!) : const SizedBox(),
+    return Stack(
+      children: [
+        Positioned(
+          left: padding,
+          child: leading ??
+              (backButton
+                  ? InkWell(
+                      child: const Icon(Icons.arrow_back_ios),
+                      onTap: () => Get.back(),
+                    )
+                  : const SizedBox()),
+        ),
+        Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+              fontSize: 18,
+              fontFamily: "SFProRounded",
+              fontWeight: FontWeight.bold,
+            ),
           ),
-          trailing ?? const SizedBox(),
-        ],
-      ),
+        ),
+        Positioned(
+          right: padding,
+          child: trailing ?? const SizedBox(),
+        ),
+      ],
     );
   }
 }
