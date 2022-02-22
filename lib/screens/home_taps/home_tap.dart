@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodapp/components/custom_app_bar.dart';
 import 'package:foodapp/components/custom_tap_bar.dart';
 import 'package:foodapp/screens/foods_screen.dart';
+import 'package:foodapp/screens/search_screen.dart';
 import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
@@ -55,7 +56,13 @@ class HomeTap extends StatelessWidget {
                 vertical: Get.height * 0.03,
               ),
               child: TextField(
+                onTap: () => Get.to(
+                  () => SearchScreen(),
+                  transition: Transition.upToDown,
+                  duration: const Duration(milliseconds: 500),
+                ),
                 cursorColor: Colors.black,
+                keyboardType: TextInputType.none,
                 decoration: InputDecoration(
                   hintText: 'Search',
                   filled: true,

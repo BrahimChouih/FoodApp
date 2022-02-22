@@ -41,6 +41,14 @@ ThemeData primaryTheme = ThemeData.light().copyWith(
       fontFamily: 'SFProRounded',
       color: Colors.black,
     ),
+    headline5: TextStyle(
+      fontFamily: 'SFProRounded',
+      color: Colors.black,
+    ),
+    headline6: TextStyle(
+      fontFamily: 'SFProRounded',
+      color: Colors.black,
+    ),
     bodyText2: TextStyle(
       fontFamily: 'SFProRounded',
       color: Colors.black,
@@ -48,7 +56,6 @@ ThemeData primaryTheme = ThemeData.light().copyWith(
     bodyText1: TextStyle(
       fontFamily: 'SFProText',
       color: Colors.black,
-      fontWeight: FontWeight.bold,
     ),
   ),
 );
