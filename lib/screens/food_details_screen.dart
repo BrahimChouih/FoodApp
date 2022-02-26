@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/components/custom_app_bar.dart';
+import 'package:foodapp/components/custom_button.dart';
+import 'package:foodapp/controllers/cart_controller.dart';
 import 'package:foodapp/models/food.dart';
 import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
 class FoodDetailsScreen extends StatelessWidget {
-  const FoodDetailsScreen({
+  FoodDetailsScreen({
     Key? key,
     required this.food,
   }) : super(key: key);
   final Food food;
+  final CartController cartController = Get.find<CartController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,6 +106,20 @@ class FoodDetailsScreen extends StatelessWidget {
                   fontFamily: 'SFProText',
                 ),
               ),
+              const Spacer(flex: 2),
+              Center(
+                child: GetBuilder<CartController>(
+                  builder: (_) => CustomButton(
+                    text: cartController.isExist(food)
+                        ? 'This item has been added'
+                        : 'Add to cart',
+                    onPressed: () {
+                      cartController.addItem(food);
+                    },
+                  ),
+                ),
+              ),
+              const Spacer(),
             ],
           ),
         ),

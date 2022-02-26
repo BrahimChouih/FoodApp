@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodapp/components/custom_app_bar.dart';
 import 'package:foodapp/components/custom_tap_bar.dart';
+import 'package:foodapp/screens/cart_screen.dart';
 import 'package:foodapp/screens/foods_screen.dart';
 import 'package:foodapp/screens/search_screen.dart';
 import 'package:foodapp/utils/constants.dart';
@@ -30,7 +31,7 @@ class HomeTap extends StatelessWidget {
                 ),
               ),
               trailing: InkWell(
-                onTap: () {},
+                onTap: () => Get.to(() => CartScreen()),
                 child: SvgPicture.asset(
                   'assets/icons/shopping-cart.svg',
                 ),
