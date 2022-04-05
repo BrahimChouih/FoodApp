@@ -7,6 +7,8 @@ import 'package:get/get.dart';
 class HomeScreen extends StatelessWidget {
   NavBarController navBarController = Get.put(NavBarController());
   CartController cartController = Get.put(CartController());
+
+  HomeScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
