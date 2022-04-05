@@ -7,9 +7,10 @@ class CustomTapBar extends StatelessWidget {
   TapController tapController = Get.put(TapController());
 
   CustomTapBar({
+    Key? key,
     required this.taps,
     required this.pages,
-  });
+  }) : super(key: key);
 
   List<String> taps;
   List<Widget> pages;

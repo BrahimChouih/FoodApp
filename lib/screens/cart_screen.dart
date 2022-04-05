@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:foodapp/components/cart_count_widget.dart';
 import 'package:foodapp/components/custom_app_bar.dart';
-import 'package:foodapp/components/custom_button.dart';
 import 'package:foodapp/controllers/cart_controller.dart';
-import 'package:foodapp/models/order.dart';
-import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
 import '../components/cart_item_widget.dart';

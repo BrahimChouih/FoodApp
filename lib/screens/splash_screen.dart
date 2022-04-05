@@ -1,7 +1,4 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodapp/components/custom_button.dart';
 import 'package:foodapp/components/logo.dart';
 import 'package:foodapp/screens/auth_screen.dart';
@@ -9,6 +6,8 @@ import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
 class SplashScreen extends StatelessWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodapp/components/food_item.dart';
 import 'package:foodapp/models/food.dart';
-import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
 class FoodsScreen extends StatelessWidget {

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:foodapp/components/custom_app_bar.dart';
-import 'package:foodapp/components/custom_button.dart';
 import 'package:get/get.dart';
 
 class FavoriteTap extends StatelessWidget {
