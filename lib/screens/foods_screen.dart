@@ -26,7 +26,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 1,
       image: 'food1',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 5.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',
@@ -36,7 +36,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 2,
       image: 'food2',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 3.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',
@@ -46,7 +46,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 3,
       image: 'food3',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 8.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',
@@ -56,7 +56,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 4,
       image: 'food1',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 5.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',
@@ -66,7 +66,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 5,
       image: 'food2',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 3.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',
@@ -76,7 +76,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 6,
       image: 'food3',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 8.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',
@@ -86,7 +86,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 7,
       image: 'food1',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 5.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',
@@ -96,7 +96,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 8,
       image: 'food2',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 3.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',
@@ -106,7 +106,7 @@ class FoodsScreen extends StatelessWidget {
     Food(
       id: 9,
       image: 'food3',
-      name: 'Veggie \ntomato mix',
+      name: 'Veggie tomato mix',
       price: 8.0,
       deleveryInfo:
           'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm',

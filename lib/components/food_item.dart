@@ -64,6 +64,7 @@ class FoodItem extends StatelessWidget {
                       fontFamily: 'SFProRounded',
                     ),
                   ),
+                  SizedBox(height: Get.height * 0.01),
                   Text(
                     '${food.price}\$',
                     style: const TextStyle(
