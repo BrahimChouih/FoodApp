@@ -123,7 +123,7 @@ class AuthScreen extends StatelessWidget {
                         () => CustomButton(
                           text: isSignin.value ? 'Sign-In' : 'Sign-Up',
                           onPressed: () {
-                            Get.to(HomeScreen());
+                            Get.offAll(HomeScreen());
                           },
                         ),
                       ),

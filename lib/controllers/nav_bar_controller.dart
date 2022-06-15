@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 class NavBarController extends GetxController {
   List<Widget> pages = [
     const HomeTap(),
-    const FavoriteTap(),
+    FavoriteTap(),
     const ProfileTap(),
     const HistoryTap(),
   ];

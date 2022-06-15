@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodapp/components/custom_app_bar.dart';
 import 'package:foodapp/components/custom_button.dart';
 import 'package:foodapp/controllers/cart_controller.dart';
+import 'package:foodapp/controllers/favorite_controller.dart';
 import 'package:foodapp/models/food.dart';
 import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
@@ -13,6 +14,7 @@ class FoodDetailsScreen extends StatelessWidget {
   }) : super(key: key);
   final Food food;
   final CartController cartController = Get.find<CartController>();
+  FavoriteController favoriteController = Get.find<FavoriteController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,10 +29,16 @@ class FoodDetailsScreen extends StatelessWidget {
                 backButton: true,
                 padding: 0.0,
                 trailing: InkWell(
-                  child: const Icon(
-                    Icons.favorite_outline,
-                  ),
-                  onTap: () {},
+                  child: GetBuilder<FavoriteController>(builder: (context) {
+                    return Icon(
+                      favoriteController.isExist(food.id)
+                          ? Icons.favorite_outlined
+                          : Icons.favorite_outline,
+                    );
+                  }),
+                  onTap: () {
+                    favoriteController.onChange(food);
+                  },
                 ),
               ),
               SizedBox(height: Get.height * 0.02),

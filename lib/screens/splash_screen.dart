@@ -48,9 +48,9 @@ class SplashScreen extends StatelessWidget {
                   child: Image.asset('assets/images/ToyFaces1.png'),
                 ),
                 Positioned(
-                  left: -70,
+                  left: -60,
                   bottom: 0,
-                  child: Image.asset('assets/images/ToyFaces2.png'),
+                  child: Image.asset('assets/images/ToyFaces2.png', scale: 1.4),
                 ),
                 // gradient
                 Positioned(

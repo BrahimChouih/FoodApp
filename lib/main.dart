@@ -3,6 +3,8 @@ import 'package:foodapp/screens/home_screen.dart';
 import 'package:foodapp/theme/primary_theme.dart';
 import 'package:get/get.dart';
 
+import 'screens/splash_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -16,8 +18,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: primaryTheme,
       debugShowCheckedModeBanner: false,
-      // home: SplashScreen(),
-      home: HomeScreen(),
+      home: SplashScreen(),
+      // home: HomeScreen(),
     );
   }
 }
