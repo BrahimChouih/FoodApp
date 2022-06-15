@@ -5,11 +5,18 @@ import 'package:foodapp/screens/auth_screen.dart';
 import 'package:foodapp/utils/constants.dart';
 import 'package:get/get.dart';
 
+import '../controllers/cart_controller.dart';
+import '../controllers/favorite_controller.dart';
+import '../controllers/nav_bar_controller.dart';
+
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    Get.put(FavoriteController());
+    Get.put(CartController());
+    Get.put(NavBarController());
     return Scaffold(
       backgroundColor: primaryColor,
       body: Column(

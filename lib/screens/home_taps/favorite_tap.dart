@@ -9,7 +9,7 @@ import '../../controllers/favorite_controller.dart';
 
 class FavoriteTap extends StatelessWidget {
   FavoriteTap({Key? key}) : super(key: key);
-  FavoriteController favoriteController = Get.put(FavoriteController());
+  FavoriteController favoriteController = Get.find<FavoriteController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -6,9 +6,7 @@ import 'package:foodapp/controllers/nav_bar_controller.dart';
 import 'package:get/get.dart';
 
 class HomeScreen extends StatelessWidget {
-  NavBarController navBarController = Get.put(NavBarController());
-  CartController cartController = Get.put(CartController());
-  FavoriteController favoriteController = Get.put(FavoriteController());
+  NavBarController navBarController = Get.find<NavBarController>();
 
   HomeScreen({Key? key}) : super(key: key);
   @override
