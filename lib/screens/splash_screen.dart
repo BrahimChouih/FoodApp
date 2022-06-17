@@ -55,9 +55,10 @@ class SplashScreen extends StatelessWidget {
                   child: Image.asset('assets/images/ToyFaces1.png'),
                 ),
                 Positioned(
-                  left: -60,
-                  bottom: 0,
-                  child: Image.asset('assets/images/ToyFaces2.png', scale: 1.4),
+                  left: -70,
+                  bottom: 10,
+                  child:
+                      Image.asset('assets/images/ToyFaces2.png', scale: 1.35),
                 ),
                 // gradient
                 Positioned(
@@ -86,7 +87,7 @@ class SplashScreen extends StatelessWidget {
                       text: 'Get started',
                       color: primaryColor,
                       backgroundColor: Colors.white,
-                      onPressed: () => Get.to(AuthScreen()),
+                      onPressed: () => Get.to(() => AuthScreen()),
                     ),
                   ),
                 ),

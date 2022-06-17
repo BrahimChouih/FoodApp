@@ -9,7 +9,7 @@ class NavBarController extends GetxController {
   List<Widget> pages = [
     const HomeTap(),
     FavoriteTap(),
-    const ProfileTap(),
+    ProfileTap(),
     const HistoryTap(),
   ];
 
