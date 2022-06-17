@@ -67,7 +67,7 @@ class ProfileTap extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: Get.height * 0.02),
+                    SizedBox(height: Get.height * 0.08),
                     titleWidget('Payment Method'),
                     SizedBox(height: Get.height * 0.02),
                     Container(
