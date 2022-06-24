@@ -15,16 +15,16 @@ class ProfileTap extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             CustomAppBar(title: 'Profile'),
             Expanded(
               child: SizedBox(
-                width: Get.width * 0.9,
+                width: MediaQuery.of(context).size.width * 0.9,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     titleWidget('Information'),
-                    SizedBox(height: Get.height * 0.02),
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.7),
@@ -35,8 +35,8 @@ class ProfileTap extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Container(
-                            width: Get.width * 0.25,
-                            height: Get.width * 0.25,
+                            width: MediaQuery.of(context).size.width * 0.25,
+                            height: MediaQuery.of(context).size.width * 0.25,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               image: const DecorationImage(
@@ -45,18 +45,23 @@ class ProfileTap extends StatelessWidget {
                               ),
                             ),
                           ),
-                          SizedBox(width: Get.width * 0.05),
+                          SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.05),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               titleWidget('Brahim CHOUIH'),
-                              SizedBox(height: Get.height * 0.01),
+                              SizedBox(
+                                  height: MediaQuery.of(context).size.height *
+                                      0.01),
                               titleWidget(
                                 'brahim26chouih@gmail.com',
                                 color: Colors.grey,
                                 fontSize: 14,
                               ),
-                              SizedBox(height: Get.height * 0.01),
+                              SizedBox(
+                                  height: MediaQuery.of(context).size.height *
+                                      0.01),
                               titleWidget(
                                 'Mobile app developer',
                                 color: Colors.grey,
@@ -67,9 +72,9 @@ class ProfileTap extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(height: Get.height * 0.08),
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.08),
                     titleWidget('Payment Method'),
-                    SizedBox(height: Get.height * 0.02),
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.02),
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.white.withOpacity(0.7),
@@ -86,7 +91,7 @@ class ProfileTap extends StatelessWidget {
                               FontAwesomeIcons.creditCard,
                             ),
                             SizedBox(
-                              width: Get.width * 0.7,
+                              width: MediaQuery.of(context).size.width * 0.7,
                               child: const Divider(color: Colors.black38),
                             ),
                             radioButton(
@@ -96,7 +101,7 @@ class ProfileTap extends StatelessWidget {
                               FontAwesomeIcons.landmark,
                             ),
                             SizedBox(
-                              width: Get.width * 0.7,
+                              width: MediaQuery.of(context).size.width * 0.7,
                               child: const Divider(color: Colors.black38),
                             ),
                             radioButton(
@@ -117,7 +122,7 @@ class ProfileTap extends StatelessWidget {
               text: 'Update',
               onPressed: () {},
             ),
-            SizedBox(height: Get.height * 0.01),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           ],
         ),
       ),

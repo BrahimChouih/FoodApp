@@ -21,12 +21,12 @@ class CartItemWidget extends StatelessWidget {
       key: ObjectKey(order),
       onDismissed: (DismissDirection dismissDirection) =>
           cartController.removeOrder(order),
-      background: backgroundSwipping(Alignment.centerLeft),
-      secondaryBackground: backgroundSwipping(Alignment.centerRight),
+      background: backgroundSwipping(context, Alignment.centerLeft),
+      secondaryBackground: backgroundSwipping(context, Alignment.centerRight),
       child: Container(
         margin: EdgeInsets.symmetric(
-          horizontal: Get.width * 0.03,
-          vertical: Get.height * 0.01,
+          horizontal: MediaQuery.of(context).size.width * 0.03,
+          vertical: MediaQuery.of(context).size.height * 0.01,
         ),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -37,12 +37,12 @@ class CartItemWidget extends StatelessWidget {
           children: [
             CircleAvatar(
               backgroundColor: Colors.transparent,
-              radius: Get.width * 0.1,
+              radius: MediaQuery.of(context).size.width * 0.1,
               backgroundImage: AssetImage(
                 'assets/images/${order.food.image}.png',
               ),
             ),
-            SizedBox(width: Get.width * 0.03),
+            SizedBox(width: MediaQuery.of(context).size.width * 0.03),
             Column(
               children: [
                 Text(
@@ -68,14 +68,15 @@ class CartItemWidget extends StatelessWidget {
     );
   }
 
-  Widget backgroundSwipping(AlignmentGeometry alignment) => Container(
+  Widget backgroundSwipping(context, AlignmentGeometry alignment) => Container(
         color: Colors.red,
         alignment: alignment,
-        padding: EdgeInsets.symmetric(horizontal: Get.width * 0.1),
+        padding: EdgeInsets.symmetric(
+            horizontal: MediaQuery.of(context).size.width * 0.1),
         child: Icon(
           Icons.delete_forever,
           color: Colors.white,
-          size: Get.width * 0.08,
+          size: MediaQuery.of(context).size.width * 0.08,
         ),
       );
 }

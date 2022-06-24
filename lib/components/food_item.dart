@@ -18,8 +18,8 @@ class FoodItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    width = width == 0 ? Get.width : width;
-    height = height == 0 ? Get.height : height;
+    width = width == 0 ? MediaQuery.of(context).size.width : width;
+    height = height == 0 ? MediaQuery.of(context).size.height : height;
     return InkWell(
       onTap: () => Get.to(
         () => FoodDetailsScreen(food: food),
@@ -29,7 +29,7 @@ class FoodItem extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Positioned(
-            top: height * 0.2,
+            top: height * 0.25,
             width: width,
             child: Container(
               height: height * 0.8,
@@ -50,7 +50,7 @@ class FoodItem extends StatelessWidget {
                       offset: const Offset(0, 0),
                     ),
                   ]),
-              padding: EdgeInsets.only(bottom: height * 0.2),
+              padding: EdgeInsets.only(bottom: height * 0.1),
               alignment: Alignment.bottomCenter,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -64,7 +64,7 @@ class FoodItem extends StatelessWidget {
                       fontFamily: 'SFProRounded',
                     ),
                   ),
-                  SizedBox(height: Get.height * 0.01),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                   Text(
                     '${food.price}\$',
                     style: const TextStyle(
@@ -85,10 +85,14 @@ class FoodItem extends StatelessWidget {
               child: Hero(
                 tag: 'food image ${food.id}',
                 child: Container(
-                  // width: width * 0.7,
-                  // height: height * 0.2,
+                  height: height * 0.5,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/images/${food.image}.png',
+                      ),
+                    ),
                     boxShadow: [
                       BoxShadow(
                         blurRadius: 10,
@@ -97,13 +101,6 @@ class FoodItem extends StatelessWidget {
                         offset: const Offset(0, 5),
                       ),
                     ],
-                  ),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.transparent,
-                    backgroundImage: AssetImage(
-                      'assets/images/${food.image}.png',
-                    ),
-                    radius: width * 0.7 / 2,
                   ),
                 ),
               ),

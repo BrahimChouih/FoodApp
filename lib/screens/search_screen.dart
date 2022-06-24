@@ -13,15 +13,15 @@ class SearchScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             Row(
               children: [
-                SizedBox(width: Get.width * 0.05),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
                 IconButton(
                   icon: const Icon(Icons.arrow_back_ios),
                   onPressed: () => Get.back(),
                 ),
-                SizedBox(width: Get.width * 0.05),
+                SizedBox(width: MediaQuery.of(context).size.width * 0.05),
                 const Expanded(
                   child: TextField(
                     decoration: InputDecoration(
@@ -33,10 +33,10 @@ class SearchScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             Expanded(
               child: Container(
-                width: Get.width,
+                width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(
@@ -44,15 +44,18 @@ class SearchScreen extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: Get.width * 0.05),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: MediaQuery.of(context).size.width * 0.05),
                   child: Column(
                     children: [
-                      SizedBox(height: Get.height * 0.03),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.03),
                       Text(
                         'Found ${resualts.length} resualts',
                         style: Get.theme.textTheme.headline5,
                       ),
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.02),
                       Expanded(
                         child: MasonryGridView.count(
                           crossAxisCount: 2,
@@ -61,14 +64,15 @@ class SearchScreen extends StatelessWidget {
                           itemCount: resualts.length,
                           itemBuilder: (_, i) {
                             return Container(
-                              height: Get.height * 0.35,
+                              height: MediaQuery.of(context).size.height * 0.35,
                               alignment: i % 2 == 0
                                   ? Alignment.topCenter
                                   : Alignment.bottomCenter,
                               child: FoodItem(
                                 food: resualts[i],
-                                width: Get.width * 0.4,
-                                height: Get.height * 0.28,
+                                width: MediaQuery.of(context).size.width * 0.4,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.28,
                               ),
                             );
                           },
@@ -188,12 +192,12 @@ class SearchScreen extends StatelessWidget {
 //                                 itemCount: resualts.length ~/ 2,
 //                                 primary: false,
 //                                 itemBuilder: (_, i) => SizedBox(
-//                                   width: Get.width * 0.5,
-//                                   height: Get.height * 0.35,
+//                                   width: MediaQuery.of(context).size.width * 0.5,
+//                                   height: MediaQuery.of(context).size.height * 0.35,
 //                                   child: FoodItem(
 //                                     food: resualts[i * 2],
-//                                     width: Get.width * 0.6,
-//                                     height: Get.height * 0.7,
+//                                     width: MediaQuery.of(context).size.width * 0.6,
+//                                     height: MediaQuery.of(context).size.height * 0.7,
 //                                   ),
 //                                 ),
 //                               ),
@@ -201,17 +205,17 @@ class SearchScreen extends StatelessWidget {
 //                             Expanded(
 //                               child: Container(
 //                                 padding:
-//                                     EdgeInsets.only(top: Get.height * 0.15),
+//                                     EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.15),
 //                                 child: ListView.builder(
 //                                   itemCount: resualts.length ~/ 2,
 //                                   primary: false,
 //                                   itemBuilder: (_, i) => SizedBox(
-//                                     width: Get.width * 0.5,
-//                                     height: Get.height * 0.35,
+//                                     width: MediaQuery.of(context).size.width * 0.5,
+//                                     height: MediaQuery.of(context).size.height * 0.35,
 //                                     child: FoodItem(
 //                                       food: resualts[(i * 2) + 1],
-//                                       width: Get.width * 0.6,
-//                                       height: Get.height * 0.7,
+//                                       width: MediaQuery.of(context).size.width * 0.6,
+//                                       height: MediaQuery.of(context).size.height * 0.7,
 //                                     ),
 //                                   ),
 //                                 ),

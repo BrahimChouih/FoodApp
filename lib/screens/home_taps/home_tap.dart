@@ -18,10 +18,10 @@ class HomeTap extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             //  App bar
             CustomAppBar(
-              padding: Get.width * 0.08,
+              padding: MediaQuery.of(context).size.width * 0.08,
               leading: InkWell(
                 onTap: () {},
                 child: SvgPicture.asset(
@@ -38,8 +38,8 @@ class HomeTap extends StatelessWidget {
             // Text "Delicious \nfood for you"
             Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: Get.width * 0.08,
-                vertical: Get.height * 0.03,
+                horizontal: MediaQuery.of(context).size.width * 0.08,
+                vertical: MediaQuery.of(context).size.height * 0.03,
               ),
               child: Text(
                 'Delicious \nfood for you',
@@ -51,8 +51,8 @@ class HomeTap extends StatelessWidget {
             // Search TextField
             Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: Get.width * 0.08,
-                vertical: Get.height * 0.03,
+                horizontal: MediaQuery.of(context).size.width * 0.08,
+                vertical: MediaQuery.of(context).size.height * 0.03,
               ),
               child: TextField(
                 onTap: () => Get.to(

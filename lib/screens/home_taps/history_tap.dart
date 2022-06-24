@@ -13,22 +13,22 @@ class HistoryTap extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             CustomAppBar(title: 'History'),
             const Spacer(),
             FaIcon(
               FontAwesomeIcons.history,
               color: Colors.grey.withOpacity(0.2),
-              size: Get.width * 0.4,
+              size: MediaQuery.of(context).size.width * 0.4,
             ),
-            SizedBox(height: Get.height * 0.01),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.01),
             Text(
               'No history yet',
               style: Get.theme.textTheme.bodyText1?.copyWith(
                 fontSize: 21,
               ),
             ),
-            SizedBox(height: Get.height * 0.01),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.01),
             Text(
               'Hit the orange button down\nbelow to Create an order',
               style: Get.theme.textTheme.bodyText1?.copyWith(
@@ -40,7 +40,7 @@ class HistoryTap extends StatelessWidget {
               text: 'Start odering',
               onPressed: () {},
             ),
-            SizedBox(height: Get.height * 0.01),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           ],
         ),
       ),

@@ -15,22 +15,22 @@ class CartEmptyScreen extends StatelessWidget {
       children: [
         const Spacer(),
         Container(
-          width: Get.width * 0.5,
+          width: MediaQuery.of(context).size.width * 0.5,
           alignment: Alignment.centerLeft,
           child: SvgPicture.asset(
             'assets/icons/shopping-cart.svg',
             color: Colors.grey.withOpacity(0.8),
-            width: Get.width * 0.4,
+            width: MediaQuery.of(context).size.width * 0.4,
           ),
         ),
-        SizedBox(height: Get.height * 0.01),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.01),
         Text(
           'No oreder yet',
           style: Get.theme.textTheme.bodyText1?.copyWith(
             fontSize: 21,
           ),
         ),
-        SizedBox(height: Get.height * 0.01),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.01),
         Text(
           'Hit the orange button down\nbelow to Create an order',
           style: Get.theme.textTheme.bodyText1?.copyWith(
@@ -42,7 +42,7 @@ class CartEmptyScreen extends StatelessWidget {
           text: 'Start odering',
           onPressed: () => Get.back(),
         ),
-        SizedBox(height: Get.height * 0.05),
+        SizedBox(height: MediaQuery.of(context).size.height * 0.05),
       ],
     );
   }

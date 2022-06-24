@@ -14,8 +14,8 @@ class FoodsScreen extends StatelessWidget {
       itemBuilder: (_, i) => Center(
         child: FoodItem(
           food: foods[i],
-          height: Get.height * 0.4,
-          width: Get.width * 0.65,
+          height: MediaQuery.of(context).size.height * 0.4,
+          width: MediaQuery.of(context).size.width * 0.65,
         ),
       ),
     );

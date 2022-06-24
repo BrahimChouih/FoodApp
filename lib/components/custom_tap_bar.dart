@@ -21,14 +21,14 @@ class CustomTapBar extends StatelessWidget {
       builder: (_) => Column(
         children: [
           SizedBox(
-            width: Get.width,
+            width: MediaQuery.of(context).size.width,
             height: 40,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               shrinkWrap: false,
               itemCount: taps.length + 1,
               itemBuilder: (_, i) => i == 0
-                  ? SizedBox(width: Get.width * 0.08)
+                  ? SizedBox(width: MediaQuery.of(context).size.width * 0.08)
                   : tapButton(taps[i - 1], i - 1),
             ),
           ),

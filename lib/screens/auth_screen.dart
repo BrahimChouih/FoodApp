@@ -19,12 +19,12 @@ class AuthScreen extends StatelessWidget {
       backgroundColor: greyColor,
       body: SingleChildScrollView(
         child: SizedBox(
-          height: Get.height,
+          height: MediaQuery.of(context).size.height,
           child: Column(
             children: [
               Container(
-                height: Get.height * 0.4,
-                width: Get.width,
+                height: MediaQuery.of(context).size.height * 0.4,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: const BorderRadius.vertical(
@@ -50,8 +50,8 @@ class AuthScreen extends StatelessWidget {
                       () => Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          switcher('Sign-In', isSignin.value),
-                          switcher('Sign-Up', !isSignin.value),
+                          switcher(context, 'Sign-In', isSignin.value),
+                          switcher(context, 'Sign-Up', !isSignin.value),
                         ],
                       ),
                     ),
@@ -60,11 +60,12 @@ class AuthScreen extends StatelessWidget {
               ),
               Expanded(
                 child: SizedBox(
-                  width: Get.width * 0.7,
+                  width: MediaQuery.of(context).size.width * 0.7,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: Get.height * 0.02),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.02),
                       Expanded(
                         flex: 3,
                         child: AuthTextField(
@@ -127,7 +128,8 @@ class AuthScreen extends StatelessWidget {
                           },
                         ),
                       ),
-                      SizedBox(height: Get.height * 0.05),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.05),
                     ],
                   ),
                 ),
@@ -139,13 +141,13 @@ class AuthScreen extends StatelessWidget {
     );
   }
 
-  Widget switcher(String title, bool isActive) {
+  Widget switcher(context, String title, bool isActive) {
     return InkWell(
       onTap: () {
         if (!isActive) isSignin.value = !isSignin.value;
       },
       child: SizedBox(
-        width: Get.width * 0.3,
+        width: MediaQuery.of(context).size.width * 0.3,
         child: Column(
           children: [
             Text(

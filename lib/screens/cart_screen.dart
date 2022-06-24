@@ -15,12 +15,12 @@ class CartScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             CustomAppBar(
               title: 'Cart',
               backButton: true,
             ),
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             GetBuilder<CartController>(
               id: cartController.builderIdMainWidget,
               builder: (_) => Expanded(

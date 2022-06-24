@@ -25,15 +25,15 @@ class SplashScreen extends StatelessWidget {
           // logo and text "Food for everyone"
           Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: Get.width * 0.15,
-              vertical: Get.height * 0.1,
+              horizontal: MediaQuery.of(context).size.width * 0.15,
+              vertical: MediaQuery.of(context).size.height * 0.1,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Logo(),
                 SizedBox(
-                  height: Get.height * 0.03,
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
                 Text(
                   "Food For \nEveryone",
@@ -64,8 +64,8 @@ class SplashScreen extends StatelessWidget {
                 Positioned(
                   bottom: 0,
                   child: Container(
-                    width: Get.width,
-                    height: Get.height * 0.4,
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height * 0.4,
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,
@@ -80,8 +80,8 @@ class SplashScreen extends StatelessWidget {
                 ),
                 // Button "Get started"
                 Positioned(
-                  width: Get.width,
-                  bottom: Get.height * 0.1,
+                  width: MediaQuery.of(context).size.width,
+                  bottom: MediaQuery.of(context).size.height * 0.1,
                   child: Center(
                     child: CustomButton(
                       text: 'Get started',

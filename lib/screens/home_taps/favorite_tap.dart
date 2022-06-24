@@ -16,11 +16,11 @@ class FavoriteTap extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: Get.height * 0.02),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.02),
             CustomAppBar(title: 'Favorite'),
             Expanded(
               child: GetBuilder<FavoriteController>(
-                builder: (context) {
+                builder: (_) {
                   return favoriteController.favorites.isEmpty
                       ? Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -28,9 +28,11 @@ class FavoriteTap extends StatelessWidget {
                             FaIcon(
                               FontAwesomeIcons.heart,
                               color: Colors.grey.withOpacity(0.2),
-                              size: Get.width * 0.4,
+                              size: MediaQuery.of(context).size.width * 0.4,
                             ),
-                            SizedBox(height: Get.height * 0.01),
+                            SizedBox(
+                                height:
+                                    MediaQuery.of(context).size.height * 0.01),
                             Text(
                               'No favorite yet',
                               style: Get.theme.textTheme.bodyText1?.copyWith(
@@ -46,14 +48,15 @@ class FavoriteTap extends StatelessWidget {
                           itemCount: favoriteController.favorites.length,
                           itemBuilder: (_, i) {
                             return Container(
-                              height: Get.height * 0.35,
+                              height: MediaQuery.of(context).size.height * 0.35,
                               alignment: i % 2 == 0
                                   ? Alignment.topCenter
                                   : Alignment.bottomCenter,
                               child: FoodItem(
                                 food: favoriteController.favorites[i],
-                                width: Get.width * 0.4,
-                                height: Get.height * 0.28,
+                                width: MediaQuery.of(context).size.width * 0.4,
+                                height:
+                                    MediaQuery.of(context).size.height * 0.28,
                               ),
                             );
                           },

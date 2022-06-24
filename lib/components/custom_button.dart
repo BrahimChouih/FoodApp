@@ -19,8 +19,8 @@ class CustomButton extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        width: Get.width * 0.7,
         padding: const EdgeInsets.all(20),
+        width: MediaQuery.of(context).size.width * 0.8,
         decoration: BoxDecoration(
           color: backgroundColor,
           borderRadius: BorderRadius.circular(25),
@@ -28,6 +28,7 @@ class CustomButton extends StatelessWidget {
         alignment: Alignment.center,
         child: Text(
           text,
+          overflow: TextOverflow.ellipsis,
           style: TextStyle(
             color: color,
             fontSize: 15,
